@@ -12,7 +12,7 @@ const Home = () => {
       <BgVideo clicked={clicked} pause={clicked}>
         <FrontPageContent
           heading={'Spacelytics'}
-          subheading={'Explore operational insights of SpaceX ! '}
+          subheading={'Explore operational insights of SpaceX !'}
         />
 
         {clicked ? <SideNavigation /> : null}

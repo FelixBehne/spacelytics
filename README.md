@@ -4,7 +4,7 @@
     <img src="public/logo_with_bg.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Spacelytics</h3>
+  <h1 align="center">Spacelytics</h1>
 
   <p align="center">
     An Awesome Web Application to Explore Statistics about SpaceX Operations.
@@ -48,7 +48,6 @@ This project has been built with:
 * [react](https://reactjs.org)
 * [next-auth0](https://github.com/auth0/nextjs-auth0)
 * [css-modules](https://github.com/css-modules/css-modules)
-
 
 ## Getting Started
 
