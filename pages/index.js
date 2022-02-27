@@ -12,7 +12,7 @@ const Home = () => {
       <BgVideo clicked={clicked} pause={clicked}>
         <FrontPageContent
           heading={'Spacelytics'}
-          subheading={'Using ADS-B data to determine flight-positions'}
+          subheading={'Explore operational insights of SpaceX ! '}
         />
 
         {clicked ? <SideNavigation /> : null}
