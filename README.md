@@ -11,6 +11,8 @@
     <a href="https://spacelytics.vercel.app"><strong>Explore the Demo »</strong></a>
     <br/>
     <br/>
+    <a href="https://spacelytics.vercel.app">View Demo</a>
+    .
     <a href="https://github.com/FelixBehne/spacelytics/issues">Report Bug</a>
     .
     <a href="https://github.com/FelixBehne/spacelytics/issues">Request Feature</a>
