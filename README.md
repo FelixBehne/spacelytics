@@ -10,7 +10,7 @@
     An Awesome Web Application to Explore Statistics about SpaceX Operations.
     <br/>
     <br/>
-    <a href="https://github.com/FelixBehne/spacelytics"><strong>Explore the docs »</strong></a>
+    <a href="https://spacelytics.vercel.app"><strong>Explore the Demo »</strong></a>
     <br/>
     <br/>
     <a href="https://github.com/FelixBehne/spacelytics">View Demo</a>

@@ -194,8 +194,7 @@ dist
 .history
 .ionide
 
-# Support for Project snippet scope
-
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,nextjs,node
+.vercel
+.vscode/settings.json
+.env.production
+.env.development

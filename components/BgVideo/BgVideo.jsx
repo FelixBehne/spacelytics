@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './BgVideo.module.css';
-import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 /**
@@ -12,7 +12,7 @@ const BgVideo = ({
   controls,
   autoPlay,
   children,
-  clicked,
+  clicked
 }) => {
   const showcase = clicked ? '--indented' : '';
   const videoContainer = clicked ? '--indented' : '';
@@ -20,9 +20,9 @@ const BgVideo = ({
     <section className={cx({ [`showcase${showcase}`]: true })}>
       <div className={cx({ [`videoContainer${videoContainer}`]: true })}>
         <video
-          preload='auto'
+          preload="auto"
           src={videoLocation}
-          type='video/mp4'
+          type="video/mp4"
           muted
           loop={loop}
           controls={controls}
@@ -52,13 +52,13 @@ BgVideo.propTypes = {
   /**
    * Should the video automatically start to play  ?
    */
-  autoPlay: PropTypes.bool,
+  autoPlay: PropTypes.bool
 };
 
 BgVideo.defaultProps = {
   videoLocation:
     'https://res.cloudinary.com/diz3ottxo/video/upload/v1606299408/minimal-globe_uardxq.mp4',
   loop: true,
-  controls: true,
-  autoPlay: true,
+  controls: false,
+  autoPlay: true
 };
