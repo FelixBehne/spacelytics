@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/FelixBehne/Spacelytics">
-    <img src="public/logo_with_bg.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/FelixBehne/spacelytics">
+    <img src="public/logo/logo_with_bg.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Spacelytics</h1>
@@ -10,14 +10,14 @@
     An Awesome Web Application to Explore Statistics about SpaceX Operations.
     <br/>
     <br/>
-    <a href="https://github.com/FelixBehne/Spacelytics"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/FelixBehne/spacelytics"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/FelixBehne/Spacelytics">View Demo</a>
+    <a href="https://github.com/FelixBehne/spacelytics">View Demo</a>
     .
-    <a href="https://github.com/FelixBehne/Spacelytics/issues">Report Bug</a>
+    <a href="https://github.com/FelixBehne/spacelytics/issues">Report Bug</a>
     .
-    <a href="https://github.com/FelixBehne/Spacelytics/issues">Request Feature</a>
+    <a href="https://github.com/FelixBehne/spacelytics/issues">Request Feature</a>
   </p>
 </p>
 
@@ -36,7 +36,7 @@
 
 ## About The Project
 
-![Screen Shot](public/screenshot.png)
+![Screen Shot](public/screenshots/landing-page.png)
 
 This project has been built to enhance my abilities in web development. It utilizes popular frameworks for creating scalable and robust web application while providing a great developer experience. 
 
