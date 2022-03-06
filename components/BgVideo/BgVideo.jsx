@@ -1,5 +1,3 @@
-import React, { useEffect, useRef } from 'react';
-
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './BgVideo.module.css';
@@ -16,10 +14,6 @@ const BgVideo = ({
   children,
   clicked
 }) => {
-  const videoRef = useRef(undefined);
-  useEffect(() => {
-    videoRef.current.defaultMuted = true;
-  });
   // const showcase = clicked ? '--indented' : '';
   // const videoContainer = clicked ? '--indented' : '';
 
@@ -33,7 +27,6 @@ const BgVideo = ({
           preload="auto"
           src={videoLocation}
           type="video/mp4"
-          muted
           loop={loop}
           controls={controls}
           autoPlay={autoPlay}
