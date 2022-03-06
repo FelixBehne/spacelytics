@@ -23,7 +23,6 @@ const BgVideo = ({
     <section className={cx({ [`showcase${showcase}`]: true })}>
       <div className={cx({ [`videoContainer${videoContainer}`]: true })}>
         <video
-          ref={videoRef}
           preload="auto"
           src={videoLocation}
           type="video/mp4"
