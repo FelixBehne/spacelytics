@@ -1,11 +1,9 @@
 <br/>
 <p align="center">
   <a href="https://github.com/FelixBehne/spacelytics">
-    <img src="public/logo/logo_v2.png" alt="Logo" width="190" height="90">
+    <img src="public/logo/logo_v2_cropped.png" alt="Logo" width="200" height="114">
   </a>
-
-  <h3 align="center">Spacelytics</h3>
-
+  <h2 align="center">Spacelytics</h2>
   <p align="center">
     An Awesome Web Application to Explore Statistics about SpaceX Operations.
     <br/>
