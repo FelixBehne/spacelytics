@@ -6,7 +6,6 @@ body,
 #root {
   background-color: black;
   margin: 0;
-  height: 100%;
 }
 .container {
   width: 100vw;
