@@ -6,9 +6,9 @@ export const FrontPageContent = ({ heading, subheading }) => {
   const { user, error, isLoading } = useUser();
 
   return (
-    <div id={styles.content}>
-      <h1 id={styles.heading}>{heading}</h1>
-      <h3 id={styles.subheading}>{subheading}</h3>
+    <div className={styles.content}>
+      <h1>{heading}</h1>
+      <p>{subheading}</p>
       <Link href="/analytics">
         <a className={styles.primAction} href="">
           {user ? 'Explore' : 'Sign In'}

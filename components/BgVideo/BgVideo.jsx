@@ -14,8 +14,11 @@ const BgVideo = ({
   children,
   clicked
 }) => {
-  const showcase = clicked ? '--indented' : '';
-  const videoContainer = clicked ? '--indented' : '';
+  // const showcase = clicked ? '--indented' : '';
+  // const videoContainer = clicked ? '--indented' : '';
+
+  const showcase = clicked ? '' : '';
+  const videoContainer = clicked ? '' : '';
   return (
     <section className={cx({ [`showcase${showcase}`]: true })}>
       <div className={cx({ [`videoContainer${videoContainer}`]: true })}>

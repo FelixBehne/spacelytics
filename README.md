@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/FelixBehne/spacelytics">
-    <img src="public/logo/logo_v2_cropped.png" alt="Logo" width="200" height="114">
+    <img src="public/logo/logo_v2_cropped_with_bg.png" alt="Logo" width="200" height="114">
   </a>
   <h2 align="center">Spacelytics</h2>
   <p align="center">

@@ -43,7 +43,7 @@
 .videoContainer video {
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  object-fit: none;
   position: absolute;
   top: 50%;
   left: 50%;
