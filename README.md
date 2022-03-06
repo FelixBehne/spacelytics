@@ -1,10 +1,10 @@
 <br/>
 <p align="center">
   <a href="https://github.com/FelixBehne/spacelytics">
-    <img src="public/logo/logo_with_bg.png" alt="Logo" width="80" height="80">
+    <img src="public/logo/logo_v2.png" alt="Logo" width="190" height="90">
   </a>
 
-  <h1 align="center">Spacelytics</h1>
+  <h3 align="center">Spacelytics</h3>
 
   <p align="center">
     An Awesome Web Application to Explore Statistics about SpaceX Operations.
@@ -13,6 +13,8 @@
     <a href="https://spacelytics.vercel.app"><strong>Explore the Demo »</strong></a>
     <br/>
     <br/>
+    <a href="https://github.com/FelixBehne/spacelytics">View Demo</a>
+    .
     <a href="https://github.com/FelixBehne/spacelytics/issues">Report Bug</a>
     .
     <a href="https://github.com/FelixBehne/spacelytics/issues">Request Feature</a>
@@ -68,6 +70,8 @@ git clone https://github.com/FelixBehne/spacelytics
 ```sh
 yarn
 ```
+
+3. Fill in the necessary environment variable (needed for authentication)
 
 4. Start the development server
 
