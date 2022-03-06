@@ -5,7 +5,7 @@
   </a>
   <h2 align="center">Spacelytics</h2>
   <p align="center">
-    An Awesome Web Application to Explore Statistics about SpaceX Operations.
+    A Web Application to Explore Statistics about SpaceX Operations.
     <br/>
     <br/>
     <a href="https://spacelytics.vercel.app"><strong>Explore the Demo »</strong></a>
@@ -34,7 +34,6 @@
 
 ![Screen Shot](public/screenshots/landing-page.png)
 
-This project has been built to enhance my abilities in web development. It utilizes popular frameworks for creating scalable and robust web application while providing a great developer experience. 
 
 ## Built With
 
