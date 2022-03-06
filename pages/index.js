@@ -17,7 +17,7 @@ const Home = () => {
 
         {clicked ? <SideNavigation /> : null}
       </BgVideo>
-      {/* <HamburgerMenu clicked={clicked} onButtonClicked={setClicked} /> */}
+      <HamburgerMenu clicked={clicked} onButtonClicked={setClicked} />
     </>
   );
 };

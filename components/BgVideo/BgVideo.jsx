@@ -29,7 +29,11 @@ const BgVideo = ({
           loop={loop}
           controls={controls}
           autoPlay={autoPlay}
-        />
+          playsInline
+          muted
+        >
+          Your Browser does not support Html5 videos
+        </video>
       </div>
       {children}
     </section>
