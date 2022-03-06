@@ -1,14 +1,12 @@
 @import url('normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body,
 #root {
   background-color: black;
+  margin: 0;
+  height: 100%;
 }
 .container {
   width: 100vw;
