@@ -1,3 +1,5 @@
+import React, { useEffect, useRef } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './BgVideo.module.css';
@@ -14,6 +16,10 @@ const BgVideo = ({
   children,
   clicked
 }) => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   // const showcase = clicked ? '--indented' : '';
   // const videoContainer = clicked ? '--indented' : '';
 
@@ -23,6 +29,7 @@ const BgVideo = ({
     <section className={cx({ [`showcase${showcase}`]: true })}>
       <div className={cx({ [`videoContainer${videoContainer}`]: true })}>
         <video
+          ref={videoRef}
           preload="auto"
           src={videoLocation}
           type="video/mp4"
