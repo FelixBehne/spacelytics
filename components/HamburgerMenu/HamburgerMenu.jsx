@@ -16,7 +16,7 @@ const HamburgerMenu = ({ notify }) => {
     <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
       <Link href="/">
         <a className={styles.btn}>
-          <i class="fa fa-home"></i> Home
+          <i className="fa fa-home"></i> Home
         </a>
       </Link>
       <Link href={user ? '/analytics' : ''}>
@@ -25,12 +25,12 @@ const HamburgerMenu = ({ notify }) => {
           className={styles.btn}
           onClick={!user ? () => alert('Please sign in first !') : undefined}
         >
-          <i class="fa fa-bar-chart"></i> Analytics
+          <i className="fa fa-bar-chart"></i> Analytics
         </a>
       </Link>
       <Link href="/about">
         <a className={styles.btn}>
-          <i class="fa fa-info-circle"></i> About
+          <i className="fa fa-info-circle"></i> About
         </a>
       </Link>
       <a
@@ -38,7 +38,7 @@ const HamburgerMenu = ({ notify }) => {
         className={styles.btn}
         href={!user ? 'api/auth/login' : 'api/auth/logout'}
       >
-        <i class="fa fa-github"></i>{' '}
+        <i className="fa fa-github"></i>{' '}
         <span style={{ 'word-spacing': '2px' }}>
           {!user ? 'Sign In' : 'Sign Out'}
         </span>
