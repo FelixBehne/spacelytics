@@ -20,7 +20,7 @@ const BgVideo = ({
   const showcase = clicked ? '' : '';
   const videoContainer = clicked ? '' : '';
   return (
-    <section className={cx({ [`showcase${showcase}`]: true })}>
+    <section id="page-wrap" className={cx({ [`showcase${showcase}`]: true })}>
       <div className={cx({ [`videoContainer${videoContainer}`]: true })}>
         <video
           preload="auto"
