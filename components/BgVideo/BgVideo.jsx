@@ -1,27 +1,13 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import styles from './BgVideo.module.css';
 
-const cx = classNames.bind(styles);
 /**
  * Fullscreen background video that is fully responsive
  */
-const BgVideo = ({
-  videoLocation,
-  loop,
-  controls,
-  autoPlay,
-  children,
-  clicked
-}) => {
-  // const showcase = clicked ? '--indented' : '';
-  // const videoContainer = clicked ? '--indented' : '';
-
-  const showcase = clicked ? '' : '';
-  const videoContainer = clicked ? '' : '';
+const BgVideo = ({ videoLocation, loop, controls, autoPlay, children }) => {
   return (
-    <section id="page-wrap" className={cx({ [`showcase${showcase}`]: true })}>
-      <div className={cx({ [`videoContainer${videoContainer}`]: true })}>
+    <section id="page-wrap" className={styles.showcase}>
+      <div className={styles.videoContainer}>
         <video
           preload="auto"
           src={videoLocation}

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import styles from './FrontPageContent.module.css';
 import { useUser } from '@auth0/nextjs-auth0';
-import Swal from 'sweetalert2';
 
 export const FrontPageContent = ({ heading, subheading }) => {
   const { user } = useUser();

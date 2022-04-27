@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './HamburgerMenu.module.css';
 import classNames from 'classnames/bind';
-import { reveal as Menu } from 'react-burger-menu';
+import Menu from 'react-burger-menu/lib/menus/reveal';
 import Link from 'next/link';
 import { useUser } from '@auth0/nextjs-auth0';
-import Swal from 'sweetalert2';
-import { ToastContainer, toast } from 'react-toastify';
 
 const cx = classNames.bind(styles);
-const HamburgerMenu = ({ notify }) => {
+const HamburgerMenu = () => {
   const { user } = useUser();
   const status = user ? 'active' : 'inactive';
 
