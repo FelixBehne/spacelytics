@@ -1,6 +1,5 @@
 // pages/_app.js
 import './../styles/global.css';
-import 'react-lite-toast/dist/index.css';
 
 import Head from 'next/head';
 import { UserProvider } from '@auth0/nextjs-auth0';

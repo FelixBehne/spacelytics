@@ -31,6 +31,7 @@ const HamburgerMenu = () => {
           <i className="fa fa-info-circle"></i> About
         </a>
       </Link>
+
       <a
         id={styles.signin}
         className={styles.btn}
