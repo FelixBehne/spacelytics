@@ -52,4 +52,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    overflow: hidden !important;
+  }
 }

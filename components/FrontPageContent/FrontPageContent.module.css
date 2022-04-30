@@ -21,11 +21,11 @@
 .content > p {
   font-size: 21px;
   letter-spacing: 0.286em;
-  margin-bottom: 35px;
   font-weight: bold;
 }
 
 .primAction {
+  margin-top: 0.6em;
   line-height: 1.2;
   letter-spacing: 0.098em;
   font-size: 20px;

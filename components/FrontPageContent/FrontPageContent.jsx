@@ -9,11 +9,15 @@ export const FrontPageContent = ({ heading, subheading }) => {
     <div className={styles.content}>
       <h1>{heading}</h1>
       <p>{subheading}</p>
-      <Link href="/analytics">
-        <a className={styles.primAction} href="">
-          {user ? 'Explore' : 'Sign In'}
+      {!user ? (
+        <a className={styles.primAction} href="api/auth/login">
+          Sign In
         </a>
-      </Link>
+      ) : (
+        <Link href="/analytics">
+          <a className={styles.primAction}>Explore</a>
+        </Link>
+      )}
     </div>
   );
 };
