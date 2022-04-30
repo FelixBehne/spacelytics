@@ -9,7 +9,7 @@ const Home = () => {
       <BgVideo>
         <FrontPageContent
           heading={'Spacelytics'}
-          subheading={'Explore the operational insights of SpaceX !'}
+          subheading={'Explore the operational insights of SpaceX!'}
         />
       </BgVideo>
     </div>

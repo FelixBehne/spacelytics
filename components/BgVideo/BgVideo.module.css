@@ -1,16 +1,4 @@
-.showcase {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  color: white;
-  overflow: hidden;
-}
-
+/* All screens */
 .videoContainer {
   position: absolute;
   top: 0;
@@ -19,8 +7,8 @@
   height: 100%;
 }
 .videoContainer video {
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: none;
   position: absolute;
   top: 50%;
@@ -37,4 +25,31 @@
   height: 100%;
   background-color: black;
   opacity: 0.7;
+}
+
+/* On screens that are 993px or more */
+.showcase {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+  overflow: hidden;
+}
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .videoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
