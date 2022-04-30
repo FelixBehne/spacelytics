@@ -1,4 +1,5 @@
 @import url('normalize.css');
+@import url('burger-button.css');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
@@ -7,7 +8,15 @@ body,
 #root {
   background-color: black;
   margin: 0;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Playfair Display', serif;
 }
+
+/* root container for analytics and about page */
 .container {
   position: relative;
   height: 100vh;
@@ -17,85 +26,4 @@ body,
   color: white;
   font-family: sans-serif;
   font-size: x-large;
-}
-
-/* html,
-body,
-body > div:first-child,
-div#__next,
-div#__next > div,
-div#__next > div > div {
-  height: 100%;
-} */
-
-html {
-  font-variant-ligatures: none;
-  -webkit-font-variant-ligatures: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Playfair Display', serif;
-}
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  /* background: #373a47; */
-  background-color: white;
-  height: 1.8px !important;
-  width: 100%;
-  border: 1px black solid;
-  border-radius: 3px;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: rgb(114, 113, 113);
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #282829;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  overflow: hidden !important;
-  height: 100vh;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  position: relative;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-#outer-container {
-  position: relative;
 }
