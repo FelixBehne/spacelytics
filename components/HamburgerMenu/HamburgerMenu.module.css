@@ -1,3 +1,4 @@
+/* On screens that are 993px or more */
 .btn {
   display: block;
   text-decoration: none;
@@ -9,7 +10,6 @@
   border-radius: 5px;
 }
 
-/* Darker background on mouse-over */
 .btn:hover {
   background-color: rgb(59, 59, 59);
 }
@@ -25,6 +25,64 @@
   color: rgb(85, 85, 85);
 }
 
-.position-absolute {
-  position: absolute;
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    word-spacing: 30px;
+    padding: 25px 23px;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(59, 59, 59);
+  }
+
+  #signin {
+    cursor: pointer;
+    margin-top: 39vh !important;
+    margin-bottom: 0vh !important;
+  }
+
+  #restricted-content--inactive {
+    cursor: not-allowed;
+    color: rgb(85, 85, 85);
+  }
+
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(59, 59, 59);
+  }
+}
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    word-spacing: 30px;
+    padding: 25px 23px;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+  .btn:hover {
+    background-color: transparent;
+  }
+
+  #signin {
+    cursor: pointer;
+    margin-top: 30vh !important;
+  }
+
+  #restricted-content--inactive {
+    cursor: not-allowed;
+    color: rgb(85, 85, 85);
+  }
 }

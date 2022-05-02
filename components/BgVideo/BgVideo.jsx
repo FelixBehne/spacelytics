@@ -8,17 +8,9 @@ const BgVideo = ({ videoLocation, loop, controls, autoPlay, children }) => {
   return (
     <section id="page-wrap" className={styles.showcase}>
       <div className={styles.videoContainer}>
-        <video
-          preload="auto"
-          src={videoLocation}
-          type="video/mp4"
-          loop={loop}
-          controls={controls}
-          autoPlay={autoPlay}
-          playsInline
-          muted
-        >
-          Your Browser does not support Html5 videos
+        <video width="100%" controls playsInline muted loop autoPlay>
+          <source src="/videos/globe.mp4" type="video/mp4; codecs=hevc" />
+          <source src="/videos/globe.webm" type="video/webm; codecs=vp9" />
         </video>
       </div>
       {children}

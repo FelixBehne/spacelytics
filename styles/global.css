@@ -1,7 +1,5 @@
 @import url('normalize.css');
 @import url('burger-button.css');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 html,
 body,
@@ -14,7 +12,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: 'Playfair Display', serif;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* root container for analytics and about page */

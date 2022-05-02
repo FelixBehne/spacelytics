@@ -17,7 +17,7 @@ const HamburgerMenu = () => {
           <i className="fa fa-home"></i> Home
         </a>
       </Link>
-      <Link href={user ? '/analytics' : ''}>
+      <Link href={user ? '/analytics' : '/'}>
         <a
           id={cx({ [`restricted-content--${status}`]: true })}
           className={styles.btn}

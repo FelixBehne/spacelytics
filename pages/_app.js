@@ -12,6 +12,10 @@ export default function App({
     <UserProvider>
       <Head>
         <title>Spacelytics</title>
+        <meta
+          name="description"
+          content="A Web Application to Explore Statistics about SpaceX Operations."
+        />
       </Head>
       <Component {...pageProps} />
     </UserProvider>
