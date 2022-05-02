@@ -15,7 +15,6 @@ const BgVideo = ({ children }) => {
         >
           <source src="/videos/globe.mp4" type="video/mp4; codecs=hevc" />
           <source src="/videos/globe.webm" type="video/webm; codecs=vp9" />
-          You're browser doesn't support HTML5 videos
         </video>
       </div>
       {children}
