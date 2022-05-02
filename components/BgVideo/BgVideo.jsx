@@ -5,7 +5,6 @@ const BgVideo = ({ children }) => {
     <section id="page-wrap" className={styles.showcase}>
       <div className={styles.videoContainer}>
         <video
-          width="100%"
           controls={false}
           preload="auto"
           playsInline
