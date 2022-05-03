@@ -12,7 +12,6 @@ const HamburgerMenu = () => {
   const size = useWindowSize();
 
   const status = user ? 'active' : 'inactive';
-  console.log(size);
 
   return (
     <Menu
@@ -50,7 +49,7 @@ const HamburgerMenu = () => {
         href={!user ? 'api/auth/login' : 'api/auth/logout'}
       >
         <i className="fa fa-github"></i>{' '}
-        <span style={{ 'word-spacing': '2px' }}>
+        <span style={{ wordSpacing: '2px' }}>
           {!user ? 'Sign In' : 'Sign Out'}
         </span>
       </a>
