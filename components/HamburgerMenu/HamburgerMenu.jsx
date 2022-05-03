@@ -21,6 +21,7 @@ const HamburgerMenu = () => {
       width={size.width < 600 ? size.width : 300}
       noOverlay={size.width < 600 ? true : false}
       disableOverlayClick={size.width < 600 ? true : false}
+      disableAutoFocus={size.width < 600 ? true : false}
     >
       <Link href="/">
         <a className={styles.btn}>
