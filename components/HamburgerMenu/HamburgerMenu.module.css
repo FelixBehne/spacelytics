@@ -1,28 +1,38 @@
+/* All screens */
+.btn:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+#restricted-content--inactive {
+  cursor: not-allowed;
+  color: rgb(85, 85, 85);
+}
+
 /* On screens that are 993px or more */
 .btn {
   display: block;
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 26px;
   word-spacing: 30px;
   padding: 25px 23px;
   margin: 20px auto;
   border-radius: 5px;
 }
 
-.btn:hover {
-  background-color: rgb(59, 59, 59);
-}
-
 #signin {
+  margin: 5px 0px 0px 0px;
+  padding: 25px 23px !important;
   cursor: pointer;
-  margin-top: 44vh !important;
-  margin-bottom: 0vh !important;
 }
 
-#restricted-content--inactive {
-  cursor: not-allowed;
-  color: rgb(85, 85, 85);
+#separator {
+  height: 40%;
+}
+
+#divider {
+  height: 1%;
+  border-bottom: 1px solid grey;
 }
 
 /* On screens that are 992px or less */
@@ -31,32 +41,27 @@
     display: block;
     text-decoration: none;
     color: white;
-    font-size: 25px;
-    word-spacing: 30px;
-    padding: 25px 23px;
-    margin: 20px auto;
+    word-spacing: 25px;
+    font-size: 27px;
+    line-height: 0px;
+    letter-spacing: 0.03em;
+    font-weight: 100;
+    padding: 30px 0px 30px 10px;
+    margin: px auto;
     border-radius: 5px;
   }
 
-  /* Darker background on mouse-over */
-  .btn:hover {
-    background-color: rgb(59, 59, 59);
+  #separator {
+    height: 54%;
+  }
+
+  #divider {
+    height: 1%;
+    border-bottom: 1px solid grey;
   }
 
   #signin {
-    cursor: pointer;
-    margin-top: 39vh !important;
-    margin-bottom: 0vh !important;
-  }
-
-  #restricted-content--inactive {
-    cursor: not-allowed;
-    color: rgb(85, 85, 85);
-  }
-
-  /* Darker background on mouse-over */
-  .btn:hover {
-    background-color: rgb(59, 59, 59);
+    margin: 0px 0px 0% 0px;
   }
 }
 
@@ -66,23 +71,26 @@
     display: block;
     text-decoration: none;
     color: white;
-    font-size: 25px;
-    word-spacing: 30px;
-    padding: 25px 23px;
+    word-spacing: 25px;
+    font-size: 27px;
+    line-height: 0px;
+    letter-spacing: 0.03em;
+    font-weight: 100;
+    padding: 26px 28px;
     margin: 20px auto;
     border-radius: 5px;
   }
-  .btn:hover {
-    background-color: transparent;
+
+  #separator {
+    height: 28%;
+  }
+
+  #divider {
+    height: 1%;
+    border-bottom: 1px solid grey;
   }
 
   #signin {
-    cursor: pointer;
-    margin-top: 30vh !important;
-  }
-
-  #restricted-content--inactive {
-    cursor: not-allowed;
-    color: rgb(85, 85, 85);
+    margin: 0px !important;
   }
 }
