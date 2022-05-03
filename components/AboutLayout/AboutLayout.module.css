@@ -1,0 +1,22 @@
+.showcase {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: auto;
+  padding-top: 100px;
+  /* border: 2px solid white; */
+  color: white;
+}
+
+.stack {
+  margin: 1.5rem 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#heading {
+  text-align: center;
+  text-transform: capitalize;
+}
