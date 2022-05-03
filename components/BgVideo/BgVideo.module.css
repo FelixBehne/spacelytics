@@ -45,10 +45,5 @@
 @media screen and (max-width: 992px) {
   .videoContainer video {
     object-fit: cover;
-    position: absolute;
-  }
-
-  .showcase {
-    overflow: hidden !important;
   }
 }
