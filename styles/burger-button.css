@@ -43,7 +43,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #282829;
+  background: rgb(16, 16, 16);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden !important;
@@ -67,40 +67,6 @@
 
 /* On screens that are 992px or less */
 @media screen and (max-width: 992px) {
-  .content > h1 {
-    font-size: 50px;
-    letter-spacing: 0.242em;
-    line-height: 80px;
-  }
-
-  .content > p {
-    font-size: 21px;
-    letter-spacing: 0.286em;
-    margin-bottom: 30px;
-  }
-  .primAction {
-    line-height: 1.2;
-    letter-spacing: 0.098em;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-weight: 400;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1;
-    border: 0.8px #fff solid;
-    border-radius: 5px;
-    background: none;
-    color: white;
-    border: 1px #fff solid;
-    text-decoration: none;
-  }
-}
-
-/* On screens that are 600px or less */
-@media screen and (max-width: 600px) {
   .bm-cross {
     height: 22px !important;
   }
@@ -110,22 +76,8 @@
     height: 100%;
   }
 
-  /* General sidebar styles */
-  .bm-menu {
-    background: #282829;
-    padding: 3em 1.5em 0;
-    font-size: 1.15em;
-    overflow: hidden !important;
-  }
-
-  /* Wrapper for item list */
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
-  }
-
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
   }
 }
