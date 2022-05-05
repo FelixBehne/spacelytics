@@ -13,6 +13,10 @@ export default function Document() {
           rel="preconnect"
           href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
         />
+        <link
+          href="http://fonts.cdnfonts.com/css/bigilla"
+          rel="stylesheet"
+        ></link>
       </Head>
       <body>
         <Main />

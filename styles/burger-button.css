@@ -63,6 +63,7 @@
 /* Outer container - an element containing everything, including the menu component (required for animation)*/
 #outer-container {
   position: relative;
+  overflow: hidden !important;
 }
 
 /* On screens that are 992px or less */
