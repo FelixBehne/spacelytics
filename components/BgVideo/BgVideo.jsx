@@ -16,7 +16,6 @@ const BgVideo = ({ children }) => {
           muted
           poster="/videos/poster.png"
         >
-          <source src="/videos/globe.webm" type="video/webm; codecs=vp9" />
           Your Browser does not support Html5 videos
         </video>
       </div>
