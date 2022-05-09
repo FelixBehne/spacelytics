@@ -10,12 +10,15 @@ const AboutLayout = ({ children }) => {
           <h1 id={styles.heading}>About</h1>
           <h3 id={styles.subheading}>The Story Behind Spacelytics 🚀</h3>
         </div>
-        <Image
-          src="/images/author.png"
-          alt="Picture of the author"
-          width={200}
-          height={200}
-        />
+        <div id={styles.image}>
+          <Image
+            src="/images/author.png"
+            alt="Picture of the author"
+            width={200}
+            height={200}
+          />
+        </div>
+
         <p className={styles.content}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
           placerat quis justo eget congue. Proin in dolor quis nulla condimentum
