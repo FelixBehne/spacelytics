@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 .showcase {
   display: flex;
   align-items: center;
@@ -25,7 +27,7 @@
 }
 
 #heading {
-  font-family: Bigilla, serif !important;
+  font-family: 'Bigilla', sans-serif !important;
   font-weight: 700;
   font-size: 3.9rem;
   line-height: 1.33;
