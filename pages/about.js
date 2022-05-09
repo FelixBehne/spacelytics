@@ -1,12 +1,11 @@
 import HamburgerMenu from '../components/HamburgerMenu';
+import AboutLayout from '../components/AboutLayout';
 
 const AboutPage = () => {
   return (
     <div id="outer-container">
       <HamburgerMenu />
-      <div id="page-wrap" className="container">
-        To be implemented ...
-      </div>
+      <AboutLayout> </AboutLayout>
     </div>
   );
 };

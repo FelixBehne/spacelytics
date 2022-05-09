@@ -18,9 +18,9 @@ const HamburgerMenu = () => {
       pageWrapId={'page-wrap'}
       outerContainerId={'outer-container'}
       width={size.width < 600 ? size.width : 300}
-      noOverlay={size.width < 600 ? true : false}
       disableOverlayClick={size.width < 600 ? true : false}
       disableAutoFocus={size.width < 600 ? true : false}
+      noTransition={size.width < 600 ? true : false}
     >
       <Link href="/">
         <a className={styles.btn}>
