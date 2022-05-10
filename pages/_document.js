@@ -13,9 +13,12 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
         />
         <link
-          href="http://fonts.cdnfonts.com/css/bigilla"
-          rel="stylesheet"
-        ></link>
+          rel="preload"
+          href="/fonts/Bigilla.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
       </Head>
       <body>
         <Main />
