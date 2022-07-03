@@ -2,7 +2,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 import HamburgerMenu from '../components/HamburgerMenu';
 
-const AnalyticsPage = () => {
+function AnalyticsPage() {
   return (
     <div id="outer-container">
       <HamburgerMenu />
@@ -11,5 +11,5 @@ const AnalyticsPage = () => {
       </div>
     </div>
   );
-};
+}
 export default withPageAuthRequired(AnalyticsPage);

@@ -34,7 +34,7 @@
 
 ## About The Project
 
-![Screen Shot](public/screenshots/landing-page.png)
+![Screen Shot](readme-assets/landing-page.png)
 
 
 ## Built With

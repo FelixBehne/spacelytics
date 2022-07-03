@@ -1,6 +1,6 @@
 import styles from './AnalyticsLayout.module.css';
 
-const AboutLayout = () => {
+function AboutLayout() {
   return (
     <section id="page-wrap" className={styles.showcase}>
       <div>
@@ -10,6 +10,6 @@ const AboutLayout = () => {
       </div>
     </section>
   );
-};
+}
 
 export default AboutLayout;

@@ -1,12 +1,12 @@
 // pages/_app.js
-import './../styles/global.css';
+import '../styles/global.css';
 
 import Head from 'next/head';
 import { UserProvider } from '@auth0/nextjs-auth0';
 
 export default function App({
   Component,
-  pageProps: { session, ...pageProps }
+  pageProps: { session, ...pageProps },
 }) {
   return (
     <UserProvider>

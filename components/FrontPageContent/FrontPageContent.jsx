@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import styles from './FrontPageContent.module.css';
 import { useUser } from '@auth0/nextjs-auth0';
+import styles from './FrontPageContent.module.css';
 
-export const FrontPageContent = ({ heading, subheading }) => {
+export function FrontPageContent({ heading, subheading }) {
   const { user } = useUser();
 
   return (
@@ -20,5 +20,5 @@ export const FrontPageContent = ({ heading, subheading }) => {
       )}
     </div>
   );
-};
+}
 export default FrontPageContent;

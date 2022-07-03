@@ -198,3 +198,5 @@ dist
 .vscode/settings.json
 .env.production
 .env.development
+tmp_data/launches.json
+package-lock.json
