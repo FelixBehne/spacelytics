@@ -8,9 +8,10 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
+import { NextPage } from 'next';
 import UserMenu from '@/components/UserMenu';
 
-const Dashboard = () => {
+const DashboardPage: NextPage = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -32,4 +33,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

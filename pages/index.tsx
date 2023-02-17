@@ -27,6 +27,7 @@ const IndexPage: NextPage = () => {
       alignItems='center'
       minHeight='100vh'
       position='relative'
+      css={{ '&, html, body': { overflow: 'hidden' } }}
     >
       <Box
         position='absolute'
@@ -41,6 +42,9 @@ const IndexPage: NextPage = () => {
         loop
         muted
         poster='poster.png'
+        playsInline
+        controls={false}
+        preload='auto'
         style={{
           position: 'absolute',
           top: '50%',
