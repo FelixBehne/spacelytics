@@ -153,7 +153,6 @@ export const LoginPage = () => {
                 _hover={{ color: 'black', bg: 'gray.100' }}
                 onClick={() => {
                   handleLogin();
-                  console.log('Email: ' + email + ' Password: ' + password);
                 }}
               >
                 Log in

@@ -11,7 +11,6 @@ export const authOptions = {
     CredentialsProvider({
       name: 'Credentials',
       async authorize(credentials) {
-        console.log('credentials', credentials);
         const user = credentials.username.trim();
         const password = credentials.password.trim();
         if (
