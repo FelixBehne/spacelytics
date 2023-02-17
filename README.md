@@ -1,81 +1,38 @@
-<br/>
-<p align="center">
-  <a href="https://github.com/FelixBehne/spacelytics">
-    <img src="public/logo/logo.svg" alt="Logo" width="200" height="114">
-  </a>
-  <h2 align="center">Spacelytics</h2>
-  <p align="center">
-    A Web Application to Explore Statistics about SpaceX Operations.
-    <br/>
-    <br/>
-    <a href="https://spacelytics.vercel.app"><strong>Explore the Demo »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://spacelytics.vercel.app">View Demo</a>
-    .
-    <a href="https://github.com/FelixBehne/spacelytics/issues">Report Bug</a>
-    .
-    <a href="https://github.com/FelixBehne/spacelytics/issues">Request Feature</a>
-  </p>
-</p>
-
-![Contributors](https://img.shields.io/github/contributors/FelixBehne/Spacelytics?color=dark-green) ![Forks](https://img.shields.io/github/forks/FelixBehne/Spacelytics?style=social) ![Stargazers](https://img.shields.io/github/stars/FelixBehne/Spacelytics?style=social) ![Issues](https://img.shields.io/github/issues/FelixBehne/Spacelytics) ![License](https://img.shields.io/github/license/FelixBehne/Spacelytics) 
-
-## Table Of Contents
-
-- [Table Of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [License](#license)
-
-
-## About The Project
-
-![Screen Shot](readme-assets/landing-page.png)
-
-
-## Built With
-
-This project has been built with: 
-
-* [nextjs](https://nextjs.org/)
-* [react](https://reactjs.org)
-* [next-auth0](https://github.com/auth0/nextjs-auth0)
-* [css-modules](https://github.com/css-modules/css-modules)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+First, run the development server:
 
-### Prerequisites
-
-* npm or yarn
-
-### Installation
-
-1. Clone the repo
-
-```sh
-git clone https://github.com/FelixBehne/spacelytics
-```
-
-2. Install NPM packages
-
-```sh
-yarn
-```
-
-3. Fill in the necessary environment variable (needed for authentication)
-
-4. Start the development server
-
-```sh
+```bash
+npm run dev
+# or
 yarn dev
+# or
+pnpm dev
 ```
 
-## License
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Distributed under the MIT License. See [LICENSE](https://github.com/FelixBehne/Spacelytics/blob/main/LICENSE.md) for more information.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
