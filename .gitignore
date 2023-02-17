@@ -199,3 +199,9 @@ dist
 tmp_data/launches.json
 package-lock.json
 .env.prod
+
+# Sentry
+.sentryclirc
+
+# Sentry
+next.config.original.js
