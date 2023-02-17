@@ -13,13 +13,13 @@ import {
   Text,
   useToast,
 } from '@chakra-ui/react';
+import { useRef, useState } from 'react';
 
 import { Logo } from '../../components/Logo';
 import { OAuthButtonGroup } from '../../components/OAuthButtonGroup';
 import { PasswordField } from '../../components/PasswordField';
 import dynamic from 'next/dynamic';
 import { signIn } from 'next-auth/react';
-import { useState } from 'react';
 
 const StarSky = dynamic(() => import('../../components/StarSky'), {
   ssr: false,
@@ -31,6 +31,7 @@ export const LoginPage = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const toast = useToast();
+  const passwordRef = useRef();
 
   const handleLogin = async () => {
     setEmailError(false);
@@ -130,20 +131,34 @@ export const LoginPage = () => {
                   placeholder='Enter your email'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  borderColor={emailError ? 'red.500' : 'gray.300'}
+                  _hover={{}}
+                  bg='black'
+                  onKeyDown={(e) => {
+                    if (e.key === 'Tab') {
+                      e.preventDefault();
+                      document.getElementById('password')?.focus();
+                    }
+                  }}
                 />
               </FormControl>
               <PasswordField
                 isInvalid={passwordError}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                bg='black'
+                id='password'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleLogin();
+                  }
+                }}
               />
             </Stack>
             <HStack justify='space-between'>
               <Checkbox defaultChecked>Remember me</Checkbox>
-              <Button variant='link' colorScheme='blue' size='sm'>
-                Forgot password?
-              </Button>
+              {/* <Button variant='link' colorScheme='blue' size='sm'>
+              Forgot password?
+                  </Button> */}
             </HStack>
             <Stack spacing='6'>
               <Button

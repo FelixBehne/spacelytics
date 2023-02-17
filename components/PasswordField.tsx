@@ -47,6 +47,7 @@ export const PasswordField = forwardRef<HTMLInputElement, InputProps>(
             autoComplete='current-password'
             required
             placeholder='********'
+            _hover={{}}
             {...props}
           />
         </InputGroup>
