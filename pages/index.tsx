@@ -27,7 +27,9 @@ const IndexPage: NextPage = () => {
       alignItems='center'
       minHeight='100vh'
       position='relative'
-      css={{ '&, html, body': { overflow: 'hidden' } }}
+      css={{
+        '&, html, body, #__next ': { overflow: 'hidden', height: '100%' },
+      }}
     >
       <Box
         position='absolute'
