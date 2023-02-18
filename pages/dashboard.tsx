@@ -1,35 +1,33 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Stack,
-  useColorMode,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Box, Center, Spinner, useColorMode } from '@chakra-ui/react';
+import { Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
+import Navbar from '@/components/Navbar';
 import { NextPage } from 'next';
-import UserMenu from '@/components/UserMenu';
+import SidebarWithHeader from '@/components/Navbar';
+import useSwr from 'swr';
 
 const DashboardPage: NextPage = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { data, error } = useSwr(
+    'https://api.spacexdata.com/v5/launches',
+    (url) => fetch(url).then((res) => res.json())
+  );
+  console.log(data);
 
   return (
-    <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box />
-          <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7}>
-              <Button onClick={toggleColorMode} variant='ghost'>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
-              <UserMenu />
-            </Stack>
-          </Flex>
-        </Flex>
-      </Box>
-    </>
+    <Box style={{ height: '100vh', overflow: 'hidden' }}>
+      <SidebarWithHeader>
+        <Box p='4'>
+          {data ? (
+            <Center h='80vh'>To be implemented</Center>
+          ) : (
+            <Center h='80vh'>
+              <Spinner size={{ base: 'md', md: 'lg' }} />
+            </Center>
+          )}
+        </Box>
+      </SidebarWithHeader>
+    </Box>
   );
 };
 

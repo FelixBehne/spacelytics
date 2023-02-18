@@ -27,8 +27,19 @@ const IndexPage: NextPage = () => {
       alignItems='center'
       minHeight='100vh'
       position='relative'
+      overflow='hidden'
       css={{
-        '&, html, body, #__next ': { overflow: 'hidden', height: '100%' },
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage:
+            'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%)',
+          zIndex: 1,
+        },
       }}
     >
       <Box
@@ -38,6 +49,7 @@ const IndexPage: NextPage = () => {
         width='100%'
         height='100%'
         bgColor='rgba(0, 0, 0, 0.6)'
+        overflow='hidden'
       />
       <video
         autoPlay
