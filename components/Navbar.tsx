@@ -29,19 +29,16 @@ import {
   FiHome,
   FiMenu,
   FiMoon,
-  FiSettings,
-  FiStar,
   FiSun,
   FiTrendingUp,
-  FiUser,
 } from 'react-icons/fi';
 import React, { ReactNode } from 'react';
 import { signOut, useSession } from 'next-auth/react';
 
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import SettingsPanel from './SettingsPanel';
 import UserProfileEdit from './UserProfileEdit';
-import { useRouter } from 'next/router';
 
 interface LinkItemProps {
   name: string;
@@ -59,13 +56,14 @@ export default function SidebarWithHeader({
   children: ReactNode;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showUserProfileEdit, setShowUserProfileEdit] = React.useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = React.useState(false);
   return (
     <Box minH='100vh' bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
       />
-
       <Drawer
         autoFocus={false}
         isOpen={isOpen}
@@ -79,8 +77,23 @@ export default function SidebarWithHeader({
           <SidebarContent onClose={onClose} />
         </DrawerContent>
       </Drawer>
-      {/* mobilenav */}
-      <MobileNav onOpen={onOpen} />
+      <MobileNav
+        onOpen={onOpen}
+        onProfileEdit={() => setShowUserProfileEdit(true)}
+        onSettingsPanel={() => setShowSettingsPanel(true)}
+      />
+      {showUserProfileEdit && (
+        <UserProfileEdit
+          onClose={() => setShowUserProfileEdit(false)}
+          isOpen={showUserProfileEdit}
+        />
+      )}
+      {showSettingsPanel && (
+        <SettingsPanel
+          onClose={() => setShowSettingsPanel(false)}
+          isOpen={showSettingsPanel}
+        />
+      )}
       <Box ml={{ base: 0, md: 60 }} p='4'>
         {children}
       </Box>
@@ -95,7 +108,6 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      transition='3s ease'
       bg={useColorModeValue('white', 'gray.900')}
       borderRight='1px'
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
@@ -161,9 +173,16 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
 
 interface MobileProps extends FlexProps {
   onOpen: () => void;
+  onProfileEdit: () => void;
+  onSettingsPanel: () => void;
 }
-const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
-  const { data: session, status } = useSession();
+const MobileNav = ({
+  onOpen,
+  onProfileEdit,
+  onSettingsPanel,
+  ...rest
+}: MobileProps) => {
+  const { data: session } = useSession();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
@@ -242,8 +261,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               </HStack>
             </MenuButton>
             <MenuList>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
+              <MenuItem onClick={() => onProfileEdit()}>Profile</MenuItem>
+              <MenuItem onClick={() => onSettingsPanel()}>Settings</MenuItem>
               <MenuDivider />
               <MenuItem onClick={() => signOut()}>Sign Out</MenuItem>
             </MenuList>

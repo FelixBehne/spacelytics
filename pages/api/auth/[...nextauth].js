@@ -17,7 +17,11 @@ export const authOptions = {
           user === process.env.USERNAME &&
           password === process.env.PASSWORD
         ) {
-          return user;
+          return {
+            username: user,
+            password: password,
+            image: null,
+          };
         } else {
           return null;
         }

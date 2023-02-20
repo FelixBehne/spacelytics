@@ -1,6 +1,5 @@
+import { Box, useColorModeValue } from '@chakra-ui/react';
 import { CSSProperties, memo } from 'react';
-
-import { Box } from '@chakra-ui/react';
 
 interface StarSkyProps {
   numStars?: number;
@@ -38,7 +37,7 @@ const StarSky = memo(function StarSky({ numStars = 100 }: StarSkyProps) {
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'black',
+    backgroundColor: useColorModeValue('white', 'black'),
     overflow: 'hidden',
     zIndex: '-1',
     pointerEvents: 'none',

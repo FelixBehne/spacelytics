@@ -11,6 +11,8 @@ import {
   Input,
   Stack,
   Text,
+  useColorMode,
+  useColorModeValue,
   useToast,
 } from '@chakra-ui/react';
 import { useRef, useState } from 'react';
@@ -18,6 +20,7 @@ import { useRef, useState } from 'react';
 import { Logo } from '../../components/Logo';
 import { OAuthButtonGroup } from '../../components/OAuthButtonGroup';
 import { PasswordField } from '../../components/PasswordField';
+import SparklingSkyBackground from '../../components/SparklingSkyBackground';
 import dynamic from 'next/dynamic';
 import { signIn } from 'next-auth/react';
 
@@ -32,6 +35,7 @@ export const LoginPage = () => {
   const [passwordError, setPasswordError] = useState(false);
   const toast = useToast();
   const passwordRef = useRef();
+  const { colorMode } = useColorMode();
 
   const handleLogin = async () => {
     setEmailError(false);
@@ -91,7 +95,11 @@ export const LoginPage = () => {
         right={0}
         zIndex='-1'
       >
-        <StarSky />
+        {colorMode === 'light' ? (
+          <SparklingSkyBackground />
+        ) : (
+          <StarSky numStars={200} />
+        )}
       </Box>
       <Stack spacing='8'>
         <Stack spacing='2'>
@@ -116,7 +124,7 @@ export const LoginPage = () => {
           py={{ base: '0', sm: '8' }}
           px={{ base: '4', sm: '10' }}
           bg={{ base: 'transparent', sm: 'bg-surface' }}
-          boxShadow={{ base: 'none', sm: 'lg' }}
+          boxShadow={{ base: 'none', sm: 'dark-lg' }}
           rounded={{ base: 'none', sm: 'lg' }}
         >
           <Stack spacing='6'>
@@ -132,7 +140,7 @@ export const LoginPage = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   _hover={{}}
-                  bg='black'
+                  bg={useColorModeValue('white', 'gray.700')}
                   onKeyDown={(e) => {
                     if (e.key === 'Tab') {
                       e.preventDefault();
@@ -145,7 +153,7 @@ export const LoginPage = () => {
                 isInvalid={passwordError}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                bg='black'
+                bg={useColorModeValue('white', 'gray.700')}
                 id='password'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
@@ -165,7 +173,10 @@ export const LoginPage = () => {
                 variant='outline'
                 width='full'
                 mt='4'
-                _hover={{ color: 'black', bg: 'gray.100' }}
+                _hover={{
+                  color: useColorModeValue('white', 'black'),
+                  bg: useColorModeValue('blue.300', 'gray.300'),
+                }}
                 onClick={() => {
                   handleLogin();
                 }}
