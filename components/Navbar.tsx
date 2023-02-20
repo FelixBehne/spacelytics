@@ -40,6 +40,8 @@ import { signOut, useSession } from 'next-auth/react';
 
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import UserProfileEdit from './UserProfileEdit';
+import { useRouter } from 'next/router';
 
 interface LinkItemProps {
   name: string;
@@ -63,6 +65,7 @@ export default function SidebarWithHeader({
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
       />
+
       <Drawer
         autoFocus={false}
         isOpen={isOpen}
@@ -135,7 +138,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         role='group'
         cursor='pointer'
         _hover={{
-          bg: 'cyan.400',
+          bg: 'gray.700',
           color: 'white',
         }}
         {...rest}

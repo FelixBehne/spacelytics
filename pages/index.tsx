@@ -28,19 +28,6 @@ const IndexPage: NextPage = () => {
       minHeight='100vh'
       position='relative'
       overflow='hidden'
-      css={{
-        '&:before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage:
-            'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%)',
-          zIndex: 1,
-        },
-      }}
     >
       <Box
         position='absolute'

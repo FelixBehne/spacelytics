@@ -1,18 +1,15 @@
-import { Box, Center, Spinner, useColorMode } from '@chakra-ui/react';
-import { Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Box, Center, Spinner } from '@chakra-ui/react';
 
-import Navbar from '@/components/Navbar';
 import { NextPage } from 'next';
 import SidebarWithHeader from '@/components/Navbar';
+import { useState } from 'react';
 import useSwr from 'swr';
 
 const DashboardPage: NextPage = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { data, error } = useSwr(
     'https://api.spacexdata.com/v5/launches',
     (url) => fetch(url).then((res) => res.json())
   );
-  console.log(data);
 
   return (
     <Box style={{ height: '100vh', overflow: 'hidden' }}>
