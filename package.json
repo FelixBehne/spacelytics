@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/next-js": "^2.0.1",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@next/font": "13.1.6",
     "@react-three/drei": "^9.56.25",
     "@react-three/fiber": "^8.11.2",
     "@sentry/nextjs": "^7.38.0",

@@ -1,3 +1,4 @@
+('use client');
 import {
   Avatar,
   Box,
@@ -10,7 +11,6 @@ import {
   HStack,
   Icon,
   IconButton,
-  Link,
   Menu,
   MenuButton,
   MenuDivider,
@@ -21,33 +21,40 @@ import {
   useColorMode,
   useColorModeValue,
   useDisclosure,
+  Link as ChakraLink,
 } from '@chakra-ui/react';
-import {
-  FiBell,
-  FiChevronDown,
-  FiCompass,
-  FiHome,
-  FiMenu,
-  FiMoon,
-  FiSun,
-  FiTrendingUp,
-} from 'react-icons/fi';
+import { FiChevronDown, FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 import React, { ReactNode } from 'react';
 import { signOut, useSession } from 'next-auth/react';
 
 import { IconType } from 'react-icons';
-import { ReactText } from 'react';
 import SettingsPanel from './SettingsPanel';
 import UserProfileEdit from './UserProfileEdit';
+import {
+  AiOutlineInfoCircle as AboutIcon,
+  AiOutlineDashboard as DashboardIcon,
+} from 'react-icons/ai';
+import {
+  RiHistoryLine as HistoryIcon,
+  RiRocket2Line as RocketIcon,
+  RiSpaceShipLine as StarlinkIcon,
+} from 'react-icons/ri';
+import { BsLightning as LaunchesIcon } from 'react-icons/bs';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
+  { name: 'Dashboard', icon: DashboardIcon },
+  { name: 'Starlink', icon: StarlinkIcon },
+  { name: 'Rockets', icon: RocketIcon },
+
+  { name: 'Launches', icon: LaunchesIcon },
+  { name: 'History', icon: HistoryIcon },
+  { name: 'About', icon: AboutIcon },
 ];
 
 export default function SidebarWithHeader({
@@ -59,7 +66,7 @@ export default function SidebarWithHeader({
   const [showUserProfileEdit, setShowUserProfileEdit] = React.useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = React.useState(false);
   return (
-    <Box minH='100vh' bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box bg={useColorModeValue('gray.100', 'gray.900')} minH='100vh'>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
@@ -108,7 +115,8 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.900')}
+      as='nav'
+      bg={useColorModeValue('white', 'gray.800')}
       borderRight='1px'
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
@@ -127,18 +135,35 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           {link.name}
         </NavItem>
       ))}
+      <Flex pos='absolute' bottom='0' left='0' w='full' align='center' p='8'>
+        <HStack spacing='1'>
+          <Text fontSize='16px' fontFamily='Helvetica Neue' fontWeight='normal'>
+            Made by
+          </Text>
+          <ChakraLink
+            href='https://github.com/FelixBehne'
+            isExternal
+            fontWeight='bold'
+          >
+            Felix Behne
+          </ChakraLink>
+        </HStack>
+      </Flex>
     </Box>
   );
 };
 
 interface NavItemProps extends FlexProps {
   icon: IconType;
-  children: ReactText;
+  children: string;
 }
 const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+  const { pathname } = useRouter();
+  const isActive = pathname === `/${children.toLowerCase()}`;
   return (
-    <Link
-      href='#'
+    <ChakraLink
+      as={Link}
+      href={`/${children.toLowerCase()}`}
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}
     >
@@ -149,25 +174,36 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         borderRadius='lg'
         role='group'
         cursor='pointer'
+        fontFamily='Helvetica Neue'
+        fontWeight={isActive ? 'semibold' : 'normal'}
+        color={isActive ? useColorModeValue('black', 'white') : 'gray.600'}
+        fontSize={isActive ? 'md' : 'sm'}
         _hover={{
-          bg: 'gray.700',
-          color: 'white',
+          fontWeight: 'semibold',
+          fontSize: 'md',
+          color: useColorModeValue('black', 'white'),
         }}
         {...rest}
       >
         {icon && (
           <Icon
             mr='4'
-            fontSize='16'
+            fontSize={isActive ? '18' : '16'}
+            color={
+              isActive
+                ? useColorModeValue('black', 'white')
+                : useColorModeValue('gray.600', 'gray.400')
+            }
             _groupHover={{
-              color: 'white',
+              fontSize: '18',
+              color: useColorModeValue('black', 'white'),
             }}
             as={icon}
           />
         )}
         {children}
       </Flex>
-    </Link>
+    </ChakraLink>
   );
 };
 
@@ -186,11 +222,11 @@ const MobileNav = ({
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
+      bg={useColorModeValue('white', 'gray.800')}
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
       height='20'
       alignItems='center'
-      bg={useColorModeValue('white', 'gray.900')}
       borderBottomWidth='1px'
       borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
       justifyContent={{ base: 'space-between', md: 'flex-end' }}
