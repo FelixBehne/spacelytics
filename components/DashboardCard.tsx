@@ -14,8 +14,9 @@ const DashboardCard = ({
       boxShadow='lg'
       p='4'
       w='calc(100% - 4rem)'
-      h='calc(100vh / 2 - 4rem)'
+      h='calc(100vh / 2 - 5rem)'
       maxW='550px'
+      visibility={{ base: 'hidden', md: 'visible' }}
     >
       <Heading as='h3' size='md' mb='4'>
         {title}

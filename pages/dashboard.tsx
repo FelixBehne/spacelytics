@@ -5,6 +5,7 @@ import { ReactElement } from 'react';
 import { NextPageWithLayout } from './_app';
 import UpcommingLaunch from '@/components/UpcommingLaunch';
 import LaunchFacilities from '@/components/LaunchFacilities';
+import PreviousLaunch from '@/components/PreviousLaunch';
 
 const DashboardPage: NextPageWithLayout = () => {
   return (
@@ -13,7 +14,7 @@ const DashboardPage: NextPageWithLayout = () => {
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing='4' h='80vh' w='100%'>
           <UpcommingLaunch />
           <LaunchFacilities />
-          <ComingSoonCard />
+          <PreviousLaunch />
           <ComingSoonCard />
         </SimpleGrid>
       </Center>
