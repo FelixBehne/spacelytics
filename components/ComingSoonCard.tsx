@@ -4,14 +4,12 @@ import { Center, Heading, useColorModeValue, VStack } from '@chakra-ui/react';
 const ComingSoonCard = () => {
   return (
     <Center
-      p='4'
       bg={useColorModeValue('white', 'gray.800')}
       borderRadius='lg'
       boxShadow='lg'
-      w='100%'
-      h='100%'
-      minH='200px'
-      minW='200px'
+      p='4'
+      w='calc(100% - 4rem)'
+      h='300px'
     >
       <VStack>
         <Center boxSize='50px' bg='red' borderRadius='full'>

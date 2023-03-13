@@ -13,7 +13,9 @@ const DashboardCard = ({
       borderRadius='lg'
       boxShadow='lg'
       p='4'
-      w='100%'
+      w='calc(100% - 4rem)'
+      h='calc(100vh / 2 - 4rem)'
+      maxW='550px'
     >
       <Heading as='h3' size='md' mb='4'>
         {title}
