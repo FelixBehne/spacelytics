@@ -12,7 +12,7 @@ import {
 const UpcommingLaunch = () => {
   return (
     <DashboardCard title='Launch facilities'>
-      <VStack spacing='6' w='100%' align='flex-start'>
+      <VStack spacing='4' w='100%' align='flex-start'>
         <VStack
           spacing='2'
           w='100%'

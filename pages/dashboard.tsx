@@ -6,16 +6,22 @@ import { NextPageWithLayout } from './_app';
 import UpcommingLaunch from '@/components/UpcommingLaunch';
 import LaunchFacilities from '@/components/LaunchFacilities';
 import PreviousLaunch from '@/components/PreviousLaunch';
+import Starlink from '@/components/Starlink';
 
 const DashboardPage: NextPageWithLayout = () => {
   return (
     <>
-      <Center w='86vw'>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing='4' h='80vh' w='100%'>
+      <Center w={['100%', '100%', '86vw']}>
+        <SimpleGrid
+          columns={{ base: 1, md: 2 }}
+          spacing={['4', '4', '6']}
+          h={['auto', 'auto', '80vh']}
+          w={['100%', '100%', '100%', '90%']}
+        >
           <UpcommingLaunch />
           <LaunchFacilities />
           <PreviousLaunch />
-          <ComingSoonCard />
+          <Starlink />
         </SimpleGrid>
       </Center>
     </>

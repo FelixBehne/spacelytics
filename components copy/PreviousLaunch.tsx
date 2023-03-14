@@ -5,6 +5,7 @@ import {
   HStack,
   IconButton,
   SimpleGrid,
+  Spacer,
   Text,
   useColorModeValue,
   VStack,
@@ -34,10 +35,10 @@ const CrewMember = createIcon({
   ),
 });
 
-const PreviousLaunch = () => {
+const UpcommingLaunch = () => {
   return (
     <DashboardCard title='Previous Launch'>
-      <SimpleGrid columns={2} spacing={{ base: '4', md: '8' }} w='100%' m='0'>
+      <SimpleGrid columns={2} spacing='4' w='100%' m='0'>
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
             <Text fontSize='sm' fontWeight='light' color='gray.600'>
@@ -106,6 +107,7 @@ const PreviousLaunch = () => {
             </HStack>
           </VStack>
         </VStack>
+        {/* Righ side */}
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
             <Text fontSize='sm' fontWeight='light' color='gray.600'>
@@ -124,6 +126,7 @@ const PreviousLaunch = () => {
               />
             </Box>
           </VStack>
+
           <VStack spacing='1' w='100%' align='flex-start' pt='4'>
             <Text fontSize='sm' fontWeight='light' color='gray.600'>
               CREW
@@ -141,4 +144,4 @@ const PreviousLaunch = () => {
   );
 };
 
-export default PreviousLaunch;
+export default UpcommingLaunch;
