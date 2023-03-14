@@ -103,7 +103,7 @@ const IndexPage: NextPage = () => {
             fontSize={{ base: 'xl', md: 'xl' }}
             fontWeight='light'
             mt={{ base: '4', md: '8' }}
-            px={{ base: '20', md: '12' }}
+            px={{ base: '10', md: '16' }}
             opacity={isVisible ? 1 : 0}
             transition='opacity 2s ease'
             onClick={session ? routeToDashboard : handleSignIn}

@@ -75,8 +75,8 @@ const Starlink = () => {
       >
         <Satellite
           alignSelf='center'
-          boxSize={['56%', '60%', '60%']}
-          mt={['0', '5', '5']}
+          boxSize={['60%', '60%', '60%']}
+          mt={['-6', '5', '5']}
           color={useColorModeValue('gray.500', 'gray.600')}
         />
         <Text
