@@ -1,15 +1,7 @@
 import DashboardCard from '@/components/DashboardCard';
-import {
-  SimpleGrid,
-  VStack,
-  Heading,
-  Text,
-  HStack,
-  Spacer,
-  Flex,
-} from '@chakra-ui/react';
+import { Flex, Heading, Spacer, Text, VStack } from '@chakra-ui/react';
 
-const UpcommingLaunch = () => {
+const LaunchFacilities = () => {
   return (
     <DashboardCard title='Launch facilities'>
       <VStack spacing='4' w='100%' align='flex-start'>
@@ -38,11 +30,15 @@ const UpcommingLaunch = () => {
           >
             <Flex align='center' w='100%' h='100%'>
               <VStack align='flex-start' spacing='0' w='200px'>
-                <Heading as='h2' fontSize='18px' color='white'>
+                <Heading
+                  as='h2'
+                  color='white'
+                  fontSize={{ base: '16px', md: '18px' }}
+                >
                   Cape Canaveral
                 </Heading>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '12px', md: '13px' }}
                   fontWeight='thin'
                   letterSpacing='wide'
                   color='white'
@@ -52,10 +48,18 @@ const UpcommingLaunch = () => {
               </VStack>
               <Spacer />
               <VStack align='flex-start' spacing='0'>
-                <Text fontSize='12px' fontWeight='normal' color='gray.100'>
+                <Text
+                  fontSize={{ base: '11px', md: '12px' }}
+                  fontWeight='normal'
+                  color='gray.100'
+                >
                   REGION
                 </Text>
-                <Heading as='h2' fontSize='16px' color='white'>
+                <Heading
+                  as='h2'
+                  color='white'
+                  fontSize={{ base: '14px', md: '16px' }}
+                >
                   FLORIDA
                 </Heading>
               </VStack>
@@ -63,7 +67,7 @@ const UpcommingLaunch = () => {
             <Flex align='center' w='100%' h='100%'>
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -72,7 +76,7 @@ const UpcommingLaunch = () => {
                   Temp
                 </Text>
                 <Text
-                  fontSize='16px'
+                  fontSize={{ base: '14px', md: '16px' }}
                   fontWeight='bold'
                   letterSpacing='wide'
                   color='white'
@@ -83,7 +87,7 @@ const UpcommingLaunch = () => {
               <Spacer />
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -91,14 +95,18 @@ const UpcommingLaunch = () => {
                 >
                   Weather
                 </Text>
-                <Text fontSize='16px' fontWeight='bold' color='white'>
+                <Text
+                  fontSize={{ base: '14px', md: '16px' }}
+                  fontWeight='bold'
+                  color='white'
+                >
                   Clouds
                 </Text>
               </VStack>
               <Spacer />
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -106,7 +114,11 @@ const UpcommingLaunch = () => {
                 >
                   Wind
                 </Text>
-                <Text fontSize='16px' fontWeight='bold' color='white'>
+                <Text
+                  fontSize={{ base: '14px', md: '16px' }}
+                  fontWeight='bold'
+                  color='white'
+                >
                   4 m/s
                 </Text>
               </VStack>
@@ -138,11 +150,15 @@ const UpcommingLaunch = () => {
           >
             <Flex align='center' w='100%' h='100%'>
               <VStack align='flex-start' spacing='0' w='200px'>
-                <Heading as='h2' fontSize='18px' color='white'>
+                <Heading
+                  as='h2'
+                  fontSize={{ base: '16px', md: '18px' }}
+                  color='white'
+                >
                   Starbase Boca Chica
                 </Heading>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '12px', md: '13px' }}
                   fontWeight='thin'
                   letterSpacing='wide'
                   color='white'
@@ -152,10 +168,18 @@ const UpcommingLaunch = () => {
               </VStack>
               <Spacer />
               <VStack align='flex-start' spacing='0'>
-                <Text fontSize='12px' fontWeight='normal' color='gray.100'>
+                <Text
+                  fontWeight='normal'
+                  color='gray.100'
+                  fontSize={{ base: '11px', md: '12px' }}
+                >
                   REGION
                 </Text>
-                <Heading as='h2' fontSize='16px' color='white'>
+                <Heading
+                  as='h2'
+                  fontSize={{ base: '14px', md: '16px' }}
+                  color='white'
+                >
                   FLORIDA
                 </Heading>
               </VStack>
@@ -163,7 +187,7 @@ const UpcommingLaunch = () => {
             <Flex align='center' w='100%' h='100%'>
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -172,7 +196,7 @@ const UpcommingLaunch = () => {
                   Temp
                 </Text>
                 <Text
-                  fontSize='16px'
+                  fontSize={{ base: '14px', md: '16px' }}
                   fontWeight='bold'
                   letterSpacing='wide'
                   color='white'
@@ -183,7 +207,7 @@ const UpcommingLaunch = () => {
               <Spacer />
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -191,14 +215,18 @@ const UpcommingLaunch = () => {
                 >
                   Weather
                 </Text>
-                <Text fontSize='16px' fontWeight='bold' color='white'>
+                <Text
+                  fontSize={{ base: '14px', md: '16px' }}
+                  fontWeight='bold'
+                  color='white'
+                >
                   Clouds
                 </Text>
               </VStack>
               <Spacer />
               <VStack align='flex-start' spacing='0'>
                 <Text
-                  fontSize='13px'
+                  fontSize={{ base: '11px', md: '13px' }}
                   fontWeight='normal'
                   color='gray.200'
                   pt='4'
@@ -206,7 +234,11 @@ const UpcommingLaunch = () => {
                 >
                   Wind
                 </Text>
-                <Text fontSize='16px' fontWeight='bold' color='white'>
+                <Text
+                  fontSize={{ base: '14px', md: '16px' }}
+                  fontWeight='bold'
+                  color='white'
+                >
                   8 m/s
                 </Text>
               </VStack>
@@ -218,4 +250,4 @@ const UpcommingLaunch = () => {
   );
 };
 
-export default UpcommingLaunch;
+export default LaunchFacilities;

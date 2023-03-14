@@ -40,39 +40,59 @@ const PreviousLaunch = () => {
       <SimpleGrid columns={2} spacing={{ base: '4', md: '8' }} w='100%' m='0'>
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               MISSION NAME
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               Crew-5
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               ROCKET NAME
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               Falcon 9
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               FLIGHT NUMBER
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               187
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               TIME (UTC)
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               Oct 05, 04:00 PM
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               LINKS
             </Text>
             <HStack spacing='2'>
@@ -108,13 +128,17 @@ const PreviousLaunch = () => {
         </VStack>
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               MISSION PATCH
             </Text>
             <Box
               bg={useColorModeValue('gray.300', 'gray.700')}
               rounded='md'
-              p='5'
+              p={{ base: '2', md: '4' }}
             >
               <Image
                 src='/mission-patch.png'
@@ -125,7 +149,11 @@ const PreviousLaunch = () => {
             </Box>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start' pt='4'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               CREW
             </Text>
             <HStack spacing='1'>

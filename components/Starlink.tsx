@@ -75,8 +75,8 @@ const Starlink = () => {
       >
         <Satellite
           alignSelf='center'
-          boxSize={['50%', '60%', '60%']}
-          mt={['5', '5', '5']}
+          boxSize={['56%', '60%', '60%']}
+          mt={['0', '5', '5']}
           color={useColorModeValue('gray.500', 'gray.600')}
         />
         <Text
@@ -84,7 +84,7 @@ const Starlink = () => {
           fontWeight='semibold'
           textAlign='center'
           w='100%'
-          mt='1'
+          mt={['0', '3', '3']}
         >
           There are currently 3268 active Starlink satellites on the low Earth
           orbit.

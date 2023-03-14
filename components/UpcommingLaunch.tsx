@@ -34,39 +34,59 @@ const UpcommingLaunch = () => {
       <SimpleGrid columns={2} spacing='4' w='100%' m='0'>
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontWeight='light'
+              color='gray.600'
+              fontSize={{ base: 'xs', md: 'sm' }}
+            >
               MISSION NAME
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontWeight='bold' fontSize={{ base: 'md', md: 'lg' }}>
               USSF-44
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               ROCKET NAME
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               Falcon Heavy
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               FLIGHT NUMBER
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               188
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               TIME (UTC)
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               Nov 01, 01:41 PM
             </Text>
           </VStack>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               LINKS
             </Text>
             <HStack spacing='2'>
@@ -103,22 +123,30 @@ const UpcommingLaunch = () => {
         {/* Righ side */}
         <VStack spacing='1' w='100%' align='flex-start'>
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               ROCKET LOGO
             </Text>
             <Falcon9
               color={useColorModeValue('white', 'gray.100')}
-              boxSize={{ base: '70px', md: '100px' }}
+              boxSize={{ base: '65px', md: '100px' }}
               bg={useColorModeValue('gray.300', 'gray.700')}
               rounded='md'
             />
           </VStack>
           <Spacer />
           <VStack spacing='1' w='100%' align='flex-start'>
-            <Text fontSize='sm' fontWeight='light' color='gray.600'>
+            <Text
+              fontSize={{ base: 'xs', md: 'sm' }}
+              fontWeight='light'
+              color='gray.600'
+            >
               LAUNCH PAD
             </Text>
-            <Text fontSize='lg' fontWeight='bold'>
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='bold'>
               KSC LC 39A
             </Text>
           </VStack>
